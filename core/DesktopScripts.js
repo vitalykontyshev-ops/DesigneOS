@@ -9,8 +9,6 @@ setInterval(updateClock, 1000);
 updateClock();
 
 
-
-
 document.querySelector(".settings-button").addEventListener("click", () => {
   fetch("core/windows/window.html")
     .then(res => res.text())
@@ -23,5 +21,3 @@ document.querySelector(".settings-button").addEventListener("click", () => {
       document.body.appendChild(script);
     });
 });
-
-
