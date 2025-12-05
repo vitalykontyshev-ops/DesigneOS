@@ -35,5 +35,7 @@
   background: var(--color-white);
   margin: 16px;
   border-radius: var(--radius-global);
-  box-shadow: var(--shadow-inner-gray); /* внутренняя тень из библиотеки */
+  box-shadow: var(--shadow-inner-gray);
+  display: none; /* скрыта по умолчанию */
 }
+
