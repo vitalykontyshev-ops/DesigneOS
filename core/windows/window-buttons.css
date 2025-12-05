@@ -1,14 +1,14 @@
-/* Базовый стиль для всех кнопок меню */
+/* Базовый стиль для всех кнопок */
 .app-window .settings-sidebar .window-menu-btn {
   display: inline-flex;
-  width: 100%;               /* заполняет контейнер по ширине */
-  align-items: center;       /* текст по центру по высоте */
+  width: 100%;
+  align-items: center;
   justify-content: flex-start;
   padding: 8px 16px;
-  border-radius: 40px;       /* единое скругление 40px */
+  border-radius: 40px;       /* единое скругление */
   box-sizing: border-box;
 
-  white-space: nowrap;       /* текст в одну строку */
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 
@@ -20,39 +20,41 @@
 
   cursor: pointer;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-  margin: 0;
 }
 
-/* 1) Дефолтная */
+/* Дефолтная */
 .app-window .settings-sidebar .window-menu-btn.default {
   background: var(--color-white);
   color: var(--color-text);
   border: none;
+  border-radius: 40px;
 }
 
-/* 2) Акцентная */
+/* Акцентная */
 .app-window .settings-sidebar .window-menu-btn.accent {
   background: var(--color-white);                /* белый фон */
   color: transparent;                            /* текст залит градиентом */
   background-clip: text;
   -webkit-background-clip: text;
   background-image: var(--color-gradient-accent);
-  border: 2px solid transparent;
-  border-image: var(--color-gradient-accent) 1;  /* градиентная обводка */
-  border-radius: 40px;                           /* скругление 40px */
+
+  border: 2px solid;                             /* обводка */
+  border-image: var(--color-gradient-accent) 1;  /* градиентная рамка */
+  border-radius: 40px;                           /* скругление */
 }
 
-/* 3) Ховер */
+/* Ховер */
 .app-window .settings-sidebar .window-menu-btn:hover:not(.disabled) {
   background: var(--color-gradient-accent);
   color: var(--color-white);
+  border-radius: 40px;
 }
 
-/* 4) Дизэйбл */
+/* Дизэйбл */
 .app-window .settings-sidebar .window-menu-btn.disabled {
   background: var(--color-primary);
   border: 1px solid var(--color-disabled-text);
   color: var(--color-disabled-text);
   cursor: not-allowed;
-  border-radius: 40px; /* тоже скругление 40px */
+  border-radius: 40px;
 }
