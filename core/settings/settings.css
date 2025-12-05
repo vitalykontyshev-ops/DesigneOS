@@ -7,26 +7,26 @@
 .settings-sidebar {
   display: flex;
   flex-direction: column;
-  gap: 8px;           /* вместо margin-bottom у кнопок можно использовать gap */
+  gap: 16px;         /* расстояние между кнопками — 16px */
   padding: 16px;
+  padding-top: 32px; /* отступ сверху — 32px */
   width: 200px;
+  box-sizing: border-box;
 }
 
-
-.settings-btn {
-  margin-bottom: 12px;
-  padding: 10px;
-  border: none;
-  border-radius: 12px;
+/* Верхняя часть меню */
+.settings-sidebar-header {
+  height: 64px;                      /* фиксированная высота — 64px */
   background: var(--color-gradient-accent);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
   color: var(--color-white);
   font-family: var(--font-pfaze-family);
-  cursor: pointer;
-  transition: background 0.3s ease-in-out;
-}
-
-.settings-btn:hover {
-  filter: brightness(1.1);
+  font-weight: var(--font-pfaze-weight);
+  font-size: var(--font-pfaze-size);
 }
 
 /* Правая панель */
@@ -38,4 +38,3 @@
   box-shadow: var(--shadow-inner-gray);
   display: none; /* скрыта по умолчанию */
 }
-
