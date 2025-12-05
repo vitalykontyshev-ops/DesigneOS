@@ -1,14 +1,14 @@
-/* Кнопки в контексте окна + меню настроек */
+/* Базовый стиль для всех кнопок меню */
 .app-window .settings-sidebar .window-menu-btn {
   display: inline-flex;
-  width: 100%;               /* по ширине — заполняют контейнер */
-  align-items: center;       /* по высоте — обнимают текст */
+  width: 100%;               /* заполняет контейнер по ширине */
+  align-items: center;       /* текст по центру по высоте */
   justify-content: flex-start;
-  padding: 8px 16px;         /* 8px-сетка, компактно по высоте */
-  border-radius: 12px;
+  padding: 8px 16px;
+  border-radius: 40px;       /* единое скругление 40px */
   box-sizing: border-box;
 
-  white-space: nowrap;       /* текст в одну строку без переносов */
+  white-space: nowrap;       /* текст в одну строку */
   overflow: hidden;
   text-overflow: ellipsis;
 
@@ -20,7 +20,7 @@
 
   cursor: pointer;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
-  margin: 0;                 /* чтобы не было неожиданных внешних отступов */
+  margin: 0;
 }
 
 /* 1) Дефолтная */
@@ -32,14 +32,14 @@
 
 /* 2) Акцентная */
 .app-window .settings-sidebar .window-menu-btn.accent {
-  background: var(--color-white);
-  color: transparent;
+  background: var(--color-white);                /* белый фон */
+  color: transparent;                            /* текст залит градиентом */
   background-clip: text;
   -webkit-background-clip: text;
   background-image: var(--color-gradient-accent);
   border: 2px solid transparent;
-  border-image: var(--color-gradient-accent) 1;
-  border-radius: 12px;
+  border-image: var(--color-gradient-accent) 1;  /* градиентная обводка */
+  border-radius: 40px;                           /* скругление 40px */
 }
 
 /* 3) Ховер */
@@ -54,4 +54,5 @@
   border: 1px solid var(--color-disabled-text);
   color: var(--color-disabled-text);
   cursor: not-allowed;
+  border-radius: 40px; /* тоже скругление 40px */
 }
