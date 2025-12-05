@@ -1,12 +1,18 @@
 <div class="settings-layout">
   <!-- Левая панель -->
   <div class="settings-sidebar">
-    <button class="settings-btn" data-target="designos">О DesignOS</button>
-    <button class="settings-btn" data-target="aboutme">Обо мне</button>
+    <!-- Акцентная кнопка -->
+    <button class="window-menu-btn accent" data-target="designos">О DesignOS</button>
+
+    <!-- Дефолтная кнопка -->
+    <button class="window-menu-btn default" data-target="aboutme">Обо мне</button>
+
+    <!-- Недоступная кнопка -->
+    <button class="window-menu-btn disabled" disabled>Рабочий стол</button>
   </div>
 
   <!-- Правая панель -->
   <div class="settings-content" id="settingsContent">
-    <!-- Пока пустой белый фрейм -->
+    <!-- Появится при клике -->
   </div>
 </div>
