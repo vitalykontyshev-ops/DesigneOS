@@ -7,3 +7,19 @@ function updateClock() {
 }
 setInterval(updateClock, 1000);
 updateClock();
+
+
+
+
+document.querySelector(".settings-button").addEventListener("click", () => {
+  fetch("core/windows/window.html")
+    .then(res => res.text())
+    .then(html => {
+      document.getElementById("windows-container").innerHTML = html;
+
+      // подключаем JS окна после вставки
+      const script = document.createElement("script");
+      script.src = "core/windows/window.js";
+      document.body.appendChild(script);
+    });
+});
