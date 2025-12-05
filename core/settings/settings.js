@@ -1,15 +1,14 @@
 (() => {
-  const buttons = document.querySelectorAll('.settings-btn');
+  const buttons = document.querySelectorAll('.window-menu-btn');
   const content = document.getElementById('settingsContent');
 
   buttons.forEach(btn => {
     btn.addEventListener('click', () => {
-      const target = btn.dataset.target;
+      if (btn.classList.contains('disabled')) return; // игнорируем недоступную кнопку
 
-      // показываем правую часть при первом клике
       content.style.display = 'block';
 
-      // пока просто меняем текст-заглушку
+      const target = btn.dataset.target;
       if (target === 'designos') {
         content.innerHTML = "<h2>О DesignOS</h2><p>Здесь будет информация о системе.</p>";
       } else if (target === 'aboutme') {
