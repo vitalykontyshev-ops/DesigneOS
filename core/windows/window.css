@@ -7,19 +7,16 @@
   min-width: 300px;
   min-height: 300px;
 
-  /* внутренний фон */
-  background: var(--color-primary);
-
   /* рамка */
   border: 2px solid transparent;
   border-radius: var(--radius-global); /* 40px */
 
-  /* градиент только на рамке */
-  background-clip: padding-box, border-box;
-  background-origin: padding-box, border-box;
+  /* два слоя: фон + рамка */
   background-image:
-    linear-gradient(var(--color-primary), var(--color-primary)), /* фон */
-    var(--color-gradient-accent); /* рамка */
+    linear-gradient(var(--color-primary), var(--color-primary)), /* внутренний фон */
+    var(--color-gradient-accent); /* градиент рамки */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 
   box-shadow: var(--shadow-drop-light), var(--shadow-drop-dark);
   display: flex;
@@ -28,7 +25,6 @@
   overflow: auto;
   z-index: 1000;
 }
-
 
 .window-header {
   display: flex;
@@ -70,6 +66,7 @@
   width: 100%;
   height: 100%;
 }
+
 
 
 
