@@ -164,8 +164,8 @@ html, body {
 /* Кнопка настроек */
 .settings-button {
   grid-column: 1 / 2;
-  width: 48px;
-  height: 48px;
+  width: 64px;
+  height: 64px;
   border-radius: var(--radius-global);
   background-color: var(--color-primary);
   box-shadow: var(--shadow-drop-light), var(--shadow-drop-dark);
@@ -261,6 +261,7 @@ html, body {
   color: var(--color-text);
   opacity: 0.7;        /* лёгкая прозрачность */
 }
+
 
 
 
