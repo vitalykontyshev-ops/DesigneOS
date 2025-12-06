@@ -191,8 +191,6 @@ html, body {
     var(--color-gradient-accent);                                        /* рамка */
 }
 
-}
-
 .toolbar {
   grid-column: 3 / 11; /* занимает центральные 8 колонок */
   height: 10vh;
@@ -257,6 +255,7 @@ html, body {
   color: var(--color-text);
   opacity: 0.7;        /* лёгкая прозрачность */
 }
+
 
 
 
