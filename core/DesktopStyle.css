@@ -126,7 +126,7 @@ html, body {
   margin-top: 7vh;
   margin-bottom: 4vh;
 }
-
+/* Кнопка настроек */
 .settings-button {
   grid-column: 1 / 2;
   width: 48px;
@@ -141,6 +141,21 @@ html, body {
   cursor: pointer;       /* курсор при наведении */
   position: relative;    /* чтобы z-index работал */
   z-index: 1000;         /* поверх других элементов */
+
+.settings-btn:hover,
+.toolbar-btn:hover,
+.project-switch:hover {
+  background-color: var(--color-phase-hover);
+  border: 4px solid transparent;
+  border-radius: 40px;
+
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  background-image:
+    linear-gradient(var(--color-phase-hover), var(--color-phase-hover)), /* фон */
+    var(--color-gradient-accent);                                        /* рамка */
+}
+
 }
 
 .toolbar {
@@ -198,6 +213,7 @@ html, body {
   -webkit-text-fill-color: transparent;
 }
 
+/* Версия */
 .page-footer .version-label {
   position: fixed;     /* закрепляем */
   bottom: 16px;        /* отступ от нижнего края */
@@ -206,4 +222,5 @@ html, body {
   color: var(--color-text);
   opacity: 0.7;        /* лёгкая прозрачность */
 }
+
 
