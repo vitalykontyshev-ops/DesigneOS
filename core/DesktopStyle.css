@@ -199,7 +199,7 @@ html, body {
 
 .toolbar {
   grid-column: 3 / 11; /* занимает центральные 8 колонок */
-  height: 10vh;
+  height: calc(10vh + 8px);
   border-radius: var(--radius-global);
   background-color: var(--color-primary);
   display: flex;
@@ -264,6 +264,7 @@ html, body {
   color: var(--color-text);
   opacity: 0.7;        /* лёгкая прозрачность */
 }
+
 
 
 
