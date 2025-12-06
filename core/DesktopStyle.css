@@ -151,7 +151,6 @@ html, body {
   box-shadow: var(--shadow-drop-light), var(--shadow-drop-dark);
 }
 
-
 /* Нижняя зона */
 .bottom-zone {
   grid-column: 1 / -1;
@@ -161,6 +160,7 @@ html, body {
   margin-top: 7vh;
   margin-bottom: 4vh;
 }
+
 /* Кнопка настроек */
 .settings-button {
   grid-column: 1 / 2;
@@ -176,8 +176,12 @@ html, body {
   cursor: pointer;       /* курсор при наведении */
   position: relative;    /* чтобы z-index работал */
   z-index: 1000;         /* поверх других элементов */
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  transform-origin: center center;
+}
 
-.settings-btn:hover,
+/* Ховер для всех кнопок рабочего стола */
+.settings-button:hover,
 .toolbar-btn:hover,
 .project-switch:hover {
   background-color: var(--color-phase-hover);
@@ -189,6 +193,8 @@ html, body {
   background-image:
     linear-gradient(var(--color-phase-hover), var(--color-phase-hover)), /* фон */
     var(--color-gradient-accent);                                        /* рамка */
+
+  transform: scale(1.8333); /* увеличение до ~88px */
 }
 
 .toolbar {
@@ -255,6 +261,7 @@ html, body {
   color: var(--color-text);
   opacity: 0.7;        /* лёгкая прозрачность */
 }
+
 
 
 
